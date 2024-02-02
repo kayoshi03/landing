@@ -1,0 +1,41 @@
+@import "style/_variable";
+
+.todo {
+  padding: 180px 213px 212px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+
+  #card_1 { grid-area: 1 / 3 / 3 / 5; }
+  #card_2 { grid-area: 2 / 1 / 4 / 3; }
+  #card_3 { grid-area: 3 / 3 / 5 / 5; }
+
+  .card {
+    padding: 48px;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    h1 {
+      color: $Primary_Black_Text;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 16px;
+    }
+  }
+  h1 {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100%;
+    max-width: 358px;
+
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    color: $Blue_Text;
+  }
+}
+
+
+
+

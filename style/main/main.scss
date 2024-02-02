@@ -1,0 +1,8 @@
+@import "prevBlock/prevBlock";
+@import "todo/todo";
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

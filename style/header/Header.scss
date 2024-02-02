@@ -1,0 +1,19 @@
+.header {
+  width: -moz-available;
+  padding: 48px 83px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  z-index: 101;
+  .logo {
+
+  }
+  .menu {
+    .menu_modal {
+      position: absolute;
+    }
+  }
+}
