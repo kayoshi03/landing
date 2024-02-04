@@ -1,0 +1,239 @@
+@import "style/_variable";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 91px 197px 64px 213px;
+  border-top-right-radius: 200px;
+  background: $Blue_Text;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  margin-right: 96px;
+  h1,p {
+    color: $Primary_White_Text;
+  }
+  .feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 96px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      h1 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: 0.2px;
+        width: 100%;
+        max-width: 317px;
+      }
+      p {
+        width: 100%;
+        max-width: 460px;
+      }
+    }
+  }
+  .feedback:after {
+    content: "";
+    position: absolute;
+    bottom: -96px;
+    left: -213px;
+    border-bottom: 1px solid $Primary_White_Text;
+    width: -moz-available;
+    width: -webkit-fill-available;
+  }
+  .contact {
+    margin-top: 96px;
+    display: flex;
+    margin-bottom: 64px;
+    width: -moz-available;
+    width: -webkit-fill-available;
+
+    .email {
+      display: flex;
+      flex-direction: column;
+      margin-right: 100px;
+      .logo {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        h1 {
+          color: $Primary_White_Text;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 0.2px;
+          line-height: 46px;
+        }
+      }
+    }
+
+    .about{
+      margin-right: 77px;
+    }
+    .social, .about {
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        margin-bottom: 32px;
+      }
+    }
+    .listContact, .list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .item{
+        display: flex;
+        align-items: start;
+        gap: 16px;
+        h1 {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          line-height: 26px;
+        }
+        span, a {
+          width: 100%;
+          max-width: 264px;
+          color: $Primary_White_Text;
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: 0.8px;
+          font-weight: 400;
+          transition: .4s;
+        }
+      }
+    }
+    .list {
+      gap: 16px;
+    }
+    .item:hover {
+      cursor: pointer;
+      span, a {
+        color: #e0e0e0;
+      }
+    }
+  }
+  .copyright {
+    p {
+      color: $Primary_White_Text;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.8px;
+      font-weight: 400;
+      opacity: 0.4;
+    }
+  }
+}
+
+@media (max-device-width: 1269px) and (min-device-width: 1024px) {
+  .footer {
+    padding: 91px 120px 64px 150px;
+    margin-right: 50px;
+
+    .contact {
+      .email {
+        margin-right: 50px;
+      }
+
+      .about {
+        margin-right: 60px;
+      }
+    }
+  }
+}
+@media (max-device-width: 1023px) and (min-device-width: 770px) {
+  .footer {
+    padding: 91px 70px 64px;
+    margin-right: 0;
+    .contact {
+      .email {
+
+        margin-right: 30px;
+
+      }
+      .about{
+        margin-right: 40px;
+      }
+    }
+  }
+}
+@media (max-device-width: 770px) and (min-device-width: 640px) {
+  .footer {
+    padding: 91px 40px 64px ;
+    border-top-right-radius: 160px;
+    margin-right: 0;
+
+    .contact {
+
+      .email {
+        margin-right: 20px;
+      }
+      .about{
+        margin-right: 30px;
+      }
+    }
+
+  }
+}
+@media (max-device-width: 639px) and (min-device-width: 480px) {
+  .footer {
+    padding: 91px 40px 64px ;
+    border-top-right-radius: 160px;
+    margin-right: 0;
+
+    .feedback {
+      flex-direction: column;
+      align-items: start;
+      gap: 50px;
+    }
+    .contact {
+      flex-direction: column;
+
+      .email {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+      .about{
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+}
+@media (max-device-width: 479px) and (min-device-width: 360px) {
+  .footer {
+    padding: 91px 40px 64px ;
+    border-top-right-radius: 160px;
+    margin-right: 0;
+
+    .feedback {
+      flex-direction: column;
+      align-items: start;
+      gap: 50px;
+    }
+    .contact {
+      flex-direction: column;
+
+      .email {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+      .about{
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+}
+

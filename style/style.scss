@@ -3,6 +3,7 @@
 @import "../assets/fonts/Gilroy/stylesheet.css";
 @import "header/Header";
 @import "main/main";
+@import "footer/footer";
 * {
   margin: 0;
   padding: 0;
@@ -40,4 +41,123 @@ button {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.64px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: .2s;
+}
+button:hover {
+  background: #4e86b4;
+  box-shadow: 5px 10px 20px 0 rgba(42, 86, 134, 0.2);
+}
+#container{
+  position: relative;
+}
+
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 102;
+  .modal_window {
+    background: #FFFFFF;
+    z-index: 103;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    .popup {
+      margin-bottom: 0 !important;
+      h1 {
+        margin-right: 100px;
+
+      }
+    }
+    .modal_header {
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      h1 {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.4px;
+        color: $Primary_Black_Text;
+      }
+      .cross {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .modal_body {
+      display: flex;
+      flex-direction: column;
+      textarea {
+        height: 144px;
+        padding: 21px 42px !important;
+        margin-bottom: 72px;
+      }
+      label {
+        color:  rgba(31, 63, 104, 0.8);
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.4px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+      input, textarea {
+        border: 1px solid rgba(31, 63, 104, 0.4);
+        height: 72px;
+        padding: 0 42px;
+        border-radius: 10px;
+        color: $Primary_Black_Text;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.8px;
+      }
+      input {
+        margin-bottom: 32px;
+      }
+
+      input::placeholder,textarea::placeholder {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: 0.4px;
+        color:  rgba(31, 63, 104, 0.2);
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.open {
+  position: relative;
+  overflow: hidden;
+}
+input, textarea {
+  outline: none;
+}
+.test {
+  border: 1px solid red !important;
+}
+@media (max-device-width: 479px) and (min-device-width: 360px) {
+  .modal{
+    .modal_window {
+      padding: 50px;
+      width: 100%;
+      max-width: 230px;
+    }
+  }
 }

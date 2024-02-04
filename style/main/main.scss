@@ -1,8 +1,9 @@
 @import "prevBlock/prevBlock";
-@import "todo/todo";
-
+@import "todoBlock/todoBlock";
+@import "clientBlock/clientBlock";
 
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }

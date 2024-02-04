@@ -1,0 +1,140 @@
+@import "style/_variable";
+
+.todoBlock {
+  padding: 180px 213px 212px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+
+  #card_1 {
+    h1 {
+      margin-top: 236px;
+    }
+    img {
+      margin: 0;
+      align-self: center;
+      position: absolute;
+      top: -21px;
+    }
+
+    grid-area: 1 / 3 / 3 / 5;
+  }
+  #card_2 { grid-area: 2 / 1 / 4 / 3; }
+  #card_3 { grid-area: 3 / 3 / 5 / 5; }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: .6s;
+
+    img {
+      margin-bottom: 56px;
+      margin-right: 124px;
+      align-self: end;
+      margin-top: 48px;
+    }
+
+    h1 {
+      color: $Primary_Black_Text;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 16px;
+      margin-right: 48px;
+      margin-left: 48px;
+    }
+
+    p {
+      margin-bottom: 32px;
+      margin-right: 48px;
+      margin-left: 48px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      margin-right: 48px;
+      margin-left: 48px;
+
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: $Link_Text;
+    }
+  }
+  .card:hover {
+    box-shadow: 5px 20px 50px rgba(0, 153, 255, 0.2);
+    transform: scale(1.1);
+
+  }
+  .title {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100%;
+    max-width: 358px;
+
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    color: $Blue_Text;
+  }
+}
+
+@media (max-device-width: 1269px) and (min-device-width: 1024px) {
+  .todoBlock {
+    padding: 180px 150px 212px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+
+
+    .card {
+      img {
+        margin-right: 100px;
+      }
+    }
+  }
+}
+@media (max-device-width: 1023px) and (min-device-width: 770px) {
+  .todoBlock {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-device-width: 769px) and (min-device-width: 640px) {
+  .todoBlock {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-device-width: 639px) and (min-device-width: 480px) {
+  .todoBlock {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-device-width: 479px) and (min-device-width: 360px) {
+  .todoBlock {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    .card {
+      img {
+        margin-right: 90px;
+      }
+    }
+  }
+}
+
