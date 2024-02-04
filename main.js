@@ -6,13 +6,11 @@ const buttonModal = document.querySelector('#openModal')
 let name, email, message, formFeed
 buttonModal.addEventListener("click",  () => {
     open()
-
     name = document.querySelector("#name")
     email = document.querySelector("#email")
     message = document.querySelector("#message")
     formFeed = document.querySelector(".modal_body")
-
-
+    
     formFeed.addEventListener("submit", (e) => {
         submit(e)
     })
@@ -25,11 +23,9 @@ buttonModal.addEventListener("click",  () => {
     message.addEventListener("input", (e) => {
         validateModal(e)
     })
-    const modal = document.querySelectorAll(".modal")
-    console.log(modal)
-        document.querySelector(".modal").addEventListener("click", (e) => {
-            close(e)
-        })
+    document.querySelector(".modal").addEventListener("click", (e) => {
+        close(e)
+    })
 })
 
 

@@ -43,7 +43,7 @@ export const submit = async(e) =>  {
 
         }
         catch (e) {
-            console.log(e)
+
         }
     }
     else {

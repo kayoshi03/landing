@@ -14,9 +14,7 @@ export function validateModal(e) {
             }
         }
         if (e.target.id === "email") {
-
             const res = e.target.value.match(patternEmail)
-            console.log(res)
             if (!res) {
                 e.target.classList.add("test")
             } else {
