@@ -1,7 +1,7 @@
 export function validateModal(e) {
     const patternName = /[a-zA-Zа-яА-Я]/g
     const patternEmail = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/gm
-    const patternMessage = /\w+/g;
+    const patternMessage = /[a-zA-Zа-яА-Я]+/g;
 
     if (e.target.value !== "") {
         if (e.target.id === "name") {
